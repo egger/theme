@@ -1,0 +1,71 @@
+{
+	"name": "theme-dyonic",
+	"version": "1.0.0",
+	"displayName": "Dyonic Theme",
+	"homepage": "https://dyonic.co",
+	"description": "Official Dyonic Theme.",
+	"publisher": "dyo",
+	"license": "MIT",
+	"scripts": {
+		"build": "node ./scripts/build.js",
+		"lint": "node ./scripts/lint.js",
+		"package": "vsce package -o ./bin/dyonic-theme.vsix",
+		"vscode:prepublish": "npm run build",
+		"vsce-publish": "vsce publish"
+	},
+	"maintainers": [
+		"Dyonic <code@dyonic.co>"
+	],
+	"contributors": [
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DyonicInc/theme.git"
+	},
+	"bugs": {
+		"url": "https://github.com/DyonicInc/theme/issues"
+	},
+	"engines": {
+		"vscode": "^1.13.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"dyonic",
+		"dark",
+		"blue",
+		"theme",
+		"color-theme"
+	],
+	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#3c4557",
+		"theme": "dark"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Dyonic",
+				"uiTheme": "vs-dark",
+				"path": "./theme/dyonic.json"
+			},
+			{
+				"label": "Dyonic Soft",
+				"uiTheme": "vs-dark",
+				"path": "./theme/dyonic-soft.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"js-yaml": "^4.1.0",
+		"prettier": "^2.5.1",
+		"tinycolor2": "^1.4.2",
+		"vsce": "^2.5.1"
+	},
+	"__metadata": {
+		"id": "dyo",
+		"publisherDisplayName": "Dyonic",
+		"publisherId": "4840db9a-d307-6022-8c86-22a268093f4d"
+	}
+}
